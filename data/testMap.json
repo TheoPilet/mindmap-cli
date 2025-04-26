@@ -1,0 +1,11 @@
+{
+  "root": {
+    "name": "TestMap",
+    "childrens": [
+      {
+        "name": "Child1",
+        "childrens": []
+      }
+    ]
+  }
+}
