@@ -24,7 +24,7 @@ public class CLIManager {
     private final Map<CommandKey, String> commandUsages = new HashMap<>();
 
     private enum CommandKey {
-        AJOUTER, RENOMER, SUPPRIMER, TROUVER, CHEMAIN, AFFICHER, ENREGISTRER, CHARGER, NOUVELLE, QUITTER
+        AJOUTER, RENOMER, SUPPRIMER, TROUVER, AFFICHER, ENREGISTRER, CHARGER, NOUVELLE, QUITTER
     }
 
     public CLIManager() {
