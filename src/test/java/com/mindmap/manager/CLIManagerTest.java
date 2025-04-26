@@ -58,13 +58,6 @@ class CLIManagerTest {
     }
 
     @Test
-    void testShowNodePath() {
-        cliManager.addNode(new String[]{"Child1", "TestMap"});
-        cliManager.addNode(new String[]{"Child2", "Child1"});
-        assertDoesNotThrow(() -> cliManager.showNodePath(new String[]{"Child2"}));
-    }
-
-    @Test
     void testNewMindMap() {
         String input = "TestMap\noui\n";
         Scanner newScanner = new Scanner(new ByteArrayInputStream(input.getBytes()));

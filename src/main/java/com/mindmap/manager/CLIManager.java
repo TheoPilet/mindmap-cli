@@ -65,9 +65,6 @@ public class CLIManager {
         commandUsages.put(CommandKey.TROUVER, CommandKey.TROUVER.name().toLowerCase() + " <nom>");
         commands.put(CommandKey.TROUVER.name().toLowerCase(), this::findNode);
 
-        commandUsages.put(CommandKey.CHEMAIN, CommandKey.CHEMAIN.name().toLowerCase() + " <nom>");
-        commands.put(CommandKey.CHEMAIN.name().toLowerCase(), this::showNodePath);
-
         commandUsages.put(CommandKey.AFFICHER, CommandKey.AFFICHER.name().toLowerCase());
         commands.put(CommandKey.AFFICHER.name().toLowerCase(), args -> mindMap.printTree(mindMap.root(), ""));
 
@@ -200,27 +197,6 @@ public class CLIManager {
             printPath(node);
             System.out.println();
         }
-    }
-
-    /**
-     * Affiche le chemin complet jusqu'à un nœud.
-     * @param args [nom du nœud]
-     */
-    public void showNodePath(String[] args) {
-        if (args.length < 1) {
-            System.out.println("Usage : " + commandUsages.get(CommandKey.CHEMAIN));
-            return;
-        }
-
-        Node node = mindMap.findNode(args[0]);
-        if (node == null) {
-            System.out.println("Nœud introuvable.");
-            return;
-        }
-
-        System.out.print("Chemin : ");
-        printPath(node);
-        System.out.println();
     }
 
     /**
